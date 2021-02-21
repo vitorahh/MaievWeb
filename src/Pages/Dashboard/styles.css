@@ -1,0 +1,78 @@
+.Container{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+}
+.Menu{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.body{
+    width: 100%;
+    height: 85%;
+}
+.leilao{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; 
+}
+.leilao-produto{
+    width: 20%;
+    margin: 10px;
+    background-color: var(--color-background-card);
+    border: 2px transparent;
+    border-radius: 10px;
+    border-color: var(--color-background-dark);
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+.leilao-produto label{
+    font-size: 2rem;
+    margin: 0;
+    height: 25px;
+    line-height: 1.2em;
+}
+.leilao-produto h2, h3{
+    margin: 0.5rem;
+}
+.btn-leilao{
+    font-size: 1.5rem;
+    height: 5rem;
+    width: 16rem;
+    border-radius: 5px;
+    color: white;
+    font: 700 1.5rem Archivo;
+    border: none;
+    background: var(--color-secundary);
+    outline: none;
+    margin-bottom: 5px;
+}
+.btn-leilao:hover{
+    font-size: 1.5rem;
+    height: 5rem;
+    width: 16rem;
+    border-radius: 5px;
+    color: white;
+    font: 700 1.5rem Archivo;
+    border: none;
+    background: var(--color-secundary-dark);
+    outline: none;
+}
+.btn-leilao svg{
+    font-size: 1.5rem;
+}
+.money-leilao{
+    color: green;
+    font-size: 2rem;
+}

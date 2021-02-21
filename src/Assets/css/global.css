@@ -1,0 +1,122 @@
+:root {
+    --color-background: #F0F0F7;
+    --color-secundary: #04D361;
+    --color-secundary-dark: #04BF58;
+    --color-text-base: #89888d;
+    --color-background-card: #DCE2EF;
+    --color-background-dark: #141414;
+    font-size: 60%;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  hmtl,
+  body,
+  #root {
+    height: 100vh;
+  }
+  
+  body {
+    background: var(--color-background);
+  }
+  
+  #root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  body,
+  input,
+  button,
+  textarea {
+    font: 500 1.6rem Poppins;
+    color: var(--color-text-base);
+  }
+  a{
+    text-decoration: none;
+  }
+  .container {
+    width: 90vw;
+    max-width: 700px;
+  }
+  
+  @media (min-width: 700px) {
+    :root {
+      font-size: 62.5%;
+    }
+  }
+
+  .btn-link{
+    font-weight: 400;
+    color: rgb(34, 34, 34);
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    outline:none;
+    font-size: 1.5rem;
+  }
+  .btn-link:hover{
+    color:#525252;
+    text-decoration: none;
+    outline:none;
+  }
+
+.btn-success{
+    font-size: 1.5rem;
+    height: 5rem;
+    width: 16rem;
+    border-radius: 5px;
+    color: white;
+    font:700 1.5rem Archivo;
+    border: none;
+    background:var(--color-secundary);
+    outline:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-success svg{
+  font-size: large;
+  margin-right: 12px;
+}
+.btn-dark{
+  font-size: 1.5rem;
+  height: 5rem;
+  width: 16rem;
+  border-radius: 5px;
+  color: white;
+  font:700 1.5rem Archivo;
+  border: none;
+  background:var(--color-background-dark);
+  outline:none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-dark svg{
+  font-size: large;
+  margin-right: 12px;
+}
+.btn-dark:hover{
+  background:var(--color-text-base);
+}
+.btn-success:hover{
+    background:var(--color-secundary-dark);
+}
+.btn-success svg {
+    margin-right: 1rem;
+    width: 2rem;
+}
+.infor-Menu{
+  width: 75%;
+}
+.options-Menu{
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+}

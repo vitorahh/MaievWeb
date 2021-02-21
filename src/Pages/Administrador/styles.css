@@ -1,0 +1,12 @@
+.Produtos{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.dropProdutos{
+    width: 100%;
+    margin-right: 10px
+}
+.dropdown{
+    width: 100%;
+}
