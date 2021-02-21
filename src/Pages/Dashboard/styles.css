@@ -37,6 +37,7 @@
     align-items: center;
     padding: 5px;
 }
+
 .leilao-produto label{
     font-size: 2rem;
     margin: 0;
@@ -75,4 +76,20 @@
 .money-leilao{
     color: green;
     font-size: 2rem;
+}
+@media (max-width: 800px) {
+    .leilao-produto{
+        width: 100%;
+        margin: 10px;
+        background-color: var(--color-background-card);
+        border: 2px transparent;
+        border-radius: 10px;
+        border-color: var(--color-background-dark);
+        display: flex;
+        flex-direction: column;
+    
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+  }
 }
