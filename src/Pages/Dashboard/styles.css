@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     height: 95vh;
+    
 }
 .Menu{
     width: 100%;
@@ -15,51 +16,21 @@
     width: 100%;
     height: 85%;
 }
-.leilao{
-    margin-top: 20px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap; 
-}
-.leilao-produto{
-    width: 20%;
-    margin: 10px;
-    background-color: var(--color-background-card);
-    border: 2px transparent;
-    border-radius: 10px;
-    border-color: var(--color-background-dark);
-    display: flex;
-    flex-direction: column;
 
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-}
-
-.leilao-produto label{
-    font-size: 2rem;
-    margin: 0;
-    height: 25px;
-    line-height: 1.2em;
-}
-.leilao-produto h2, h3{
-    margin: 0.5rem;
-}
-.btn-leilao{
+.btn-lance{
     font-size: 1.5rem;
-    height: 5rem;
-    width: 16rem;
+    height: 3rem;
+    width: 15rem;
     border-radius: 5px;
-    color: white;
+    color: #FFFFFF;
     font: 700 1.5rem Archivo;
     border: none;
     background: var(--color-secundary);
     outline: none;
     margin-bottom: 5px;
+    transition: all 0.5s;
 }
-.btn-leilao:hover{
+.btn-lance:hover{
     font-size: 1.5rem;
     height: 5rem;
     width: 16rem;
@@ -70,26 +41,96 @@
     background: var(--color-secundary-dark);
     outline: none;
 }
-.btn-leilao svg{
+.btn-lance svg{
     font-size: 1.5rem;
+    transition: all 0.5s;
 }
-.money-leilao{
-    color: green;
+.btn-lance:hover svg{
     font-size: 2rem;
 }
-@media (max-width: 800px) {
-    .leilao-produto{
-        width: 100%;
-        margin: 10px;
-        background-color: var(--color-background-card);
-        border: 2px transparent;
-        border-radius: 10px;
-        border-color: var(--color-background-dark);
+
+.cards-container{
+    margin-top: 20px;
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap; 
+    border-radius: 1rem;
+    overflow-y: scroll;
+}
+
+.cards{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0.5rem;
+    border: 0.2rem solid #414141;
+    border-radius: 1rem;
+}
+.cards-header{
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+}
+.cards-title{
+    color: #414141;
+    font-size: 1.8rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.cards-Number{
+    margin: 0;
+    color:  #414141;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+}
+.moneycard{
+    color:  #00bb54;
+    font-size: 2rem; 
+    text-align: center;
+}
+@media (max-width: 1323px){
+    .cards{
+        width: 20%;
+    }  
+}
+@media (max-width: 959px) {
+    .cards{
+        width: 45% !important;
+    }
+    .cards-title{
+        font-size: 1.5rem;
+    }
+    .cards-Number{
+        font-size: 1.3rem;
+    }
+    .btn-lance{
+        font-size: 1.3rem;
+        height: 3rem;
+        width: 13rem;
         display: flex;
-        flex-direction: column;
-    
-        justify-content: space-between;
         align-items: center;
-        padding: 5px;
-  }
+        justify-content: center;
+        
+    }
+    .moneycard{
+        font-size: small
+    }
+    .btn-lance svg{
+        padding-right: 5px;
+    }
+    .btn-lance:hover{
+        height: 3rem;
+        width: 15rem;
+    }
+    .btn-dark{
+        padding: 10px;
+    }
 }

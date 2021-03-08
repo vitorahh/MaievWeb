@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { render } from '@testing-library/react';
 import { Link, useHistory } from 'react-router-dom';
 
 import './styles.css'
@@ -12,7 +13,6 @@ import { lstProdutosInterface } from '../../Interfaces/Produtos';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCrown, faGavel } from '@fortawesome/free-solid-svg-icons';
 
-import { render } from '@testing-library/react';
 import ModalLance from './Modal';
 import { getUserController } from '../../Controllers/Login/LoginControllers';
 
@@ -52,19 +52,30 @@ function Dashboard(){
             <hr/>
             <div className="body">
                 <h1>Produtos</h1>
-                <div className="leilao">
+                <div className="cards-container" >
                    {Produtos.map((response) =>
-                        <div className="leilao-produto" key={response.iD_PRODUTO}>
-                                <label>
-                                    {response.dS_NOME}
-                                </label>
-                                <h3 title="Ultimo Lance" className="money-leilao">{response.vL_LANCE_ATUAL.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</h3>
-                                <h2>Total de {response.nR_LANCES} Lances</h2>  
-                                <button className="btn-leilao"  onClick={()=> render(
-                                            <ModalLance titleModal="Dar um Lance"setRealod={setReload} ID_PRODUTO={response.iD_PRODUTO} key={response.iD_PRODUTO}/>
-                                                )}>
-                                    <FontAwesomeIcon icon={faGavel} /> Dar um Lance
-                                </button>
+                        <div className="cards" key={response.iD_PRODUTO}>
+                            <div className="cards-header">
+                                <div className="cards-title">
+                                        {response.dS_NOME}
+                                </div>
+                                <div className="cards-Number">
+                                    Total de {response.nR_LANCES} Lances
+                                </div>
+                            </div>
+                            <div className="cards-body">
+                                <h3 title="Ultimo Lance" className="moneycard">{response.vL_LANCE_ATUAL.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</h3>
+                                <button className="btn-lance"  onClick={()=> render(
+                                                <ModalLance 
+                                                    titleModal="Dar um Lance"
+                                                    setRealod={setReload} 
+                                                    ID_PRODUTO={response.iD_PRODUTO} 
+                                                    key={response.iD_PRODUTO}
+                                                />
+                                            )}>
+                                        <FontAwesomeIcon icon={faGavel} /> Dar um Lance
+                                    </button>
+                            </div>
                         </div>
                     )}
                 </div>

@@ -71,7 +71,7 @@ function Administrador(){
                         />
                     </div>
                     <div className="btngroupCad">
-                        <button className="btn-leilao"  onClick={()=> render(
+                        <button className="btn-success"  onClick={()=> render(
                                                 <ModalProduto titleModal="Cadastrar Produto"setRealod={setReload} />
                                                     )}>
                             <FontAwesomeIcon icon={faGavel} /> Cadastrar
